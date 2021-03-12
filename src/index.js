@@ -2,5 +2,23 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-  return [];
+  let arr = [];
+  if(matrix == undefined || matrix.length == 0){
+    return arr;
+  }else{
+    for (i = 0; i < matrix.length; i++){
+      if(i % 2 == 0){
+          for (j = 0; j < matrix[i].length; j++){
+          arr.push(matrix[i][j])
+          console.log(arr);
+          }
+      }else{
+          for (j = matrix[i].length - 1; j >= 0; j--){
+              arr.push(matrix[i][j])
+              console.log(arr);
+              }
+      }
+    }
+    return arr;
+  }
 }
